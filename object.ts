@@ -11,6 +11,5 @@ console.log(namee);
 console.log(salary);
 
 for (var item in employee){
-    console.log(employee[item]);
+    console.log(employee[item as keyof typeof employee]);
 }
-
