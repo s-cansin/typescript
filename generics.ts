@@ -43,7 +43,22 @@ function checkLength<T extends HasLength>(item:T):void{
 checkLength([1,2,3]);
 
 
-
-
 type person = {name:string, age:number};
 type personKeys = keyof person;
+
+
+
+
+type apiResponse<Data extends object> =
+{
+    data: Data,
+    iserror : boolean
+}
+
+const response:apiResponse<{name:string}> = 
+{
+    data:{
+        name:"test"
+    },
+    iserror : false
+}
